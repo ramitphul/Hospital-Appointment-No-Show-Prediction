@@ -1,0 +1,158 @@
+[
+  {
+    "model_name": "Logistic_Regression",
+    "accuracy": 0.5925,
+    "precision": 0.3096,
+    "recall": 0.8279,
+    "specificity": 0.5329,
+    "f1_score": 0.4507,
+    "roc_auc": 0.7427,
+    "pr_auc": 0.3831,
+    "brier_score": 0.2107,
+    "threshold": 0.5,
+    "confusion_matrix": [
+      [
+        5641,
+        4944
+      ],
+      [
+        461,
+        2217
+      ]
+    ],
+    "true_positives": 2217,
+    "false_positives": 4944,
+    "true_negatives": 5641,
+    "false_negatives": 461
+  },
+  {
+    "model_name": "Decision_Tree",
+    "accuracy": 0.5911,
+    "precision": 0.3091,
+    "recall": 0.8301,
+    "specificity": 0.5307,
+    "f1_score": 0.4505,
+    "roc_auc": 0.7357,
+    "pr_auc": 0.371,
+    "brier_score": 0.211,
+    "threshold": 0.5,
+    "confusion_matrix": [
+      [
+        5617,
+        4968
+      ],
+      [
+        455,
+        2223
+      ]
+    ],
+    "true_positives": 2223,
+    "false_positives": 4968,
+    "true_negatives": 5617,
+    "false_negatives": 455
+  },
+  {
+    "model_name": "Random_Forest",
+    "accuracy": 0.5883,
+    "precision": 0.3112,
+    "recall": 0.8562,
+    "specificity": 0.5205,
+    "f1_score": 0.4565,
+    "roc_auc": 0.7511,
+    "pr_auc": 0.3976,
+    "brier_score": 0.2045,
+    "threshold": 0.5,
+    "confusion_matrix": [
+      [
+        5510,
+        5075
+      ],
+      [
+        385,
+        2293
+      ]
+    ],
+    "true_positives": 2293,
+    "false_positives": 5075,
+    "true_negatives": 5510,
+    "false_negatives": 385
+  },
+  {
+    "model_name": "K_Nearest_Neighbors",
+    "accuracy": 0.7902,
+    "precision": 0.4328,
+    "recall": 0.1251,
+    "specificity": 0.9585,
+    "f1_score": 0.1941,
+    "roc_auc": 0.7105,
+    "pr_auc": 0.3451,
+    "brier_score": 0.151,
+    "threshold": 0.5,
+    "confusion_matrix": [
+      [
+        10146,
+        439
+      ],
+      [
+        2343,
+        335
+      ]
+    ],
+    "true_positives": 335,
+    "false_positives": 439,
+    "true_negatives": 10146,
+    "false_negatives": 2343
+  },
+  {
+    "model_name": "Gradient_Boosting",
+    "accuracy": 0.8019,
+    "precision": 0.5977,
+    "recall": 0.0571,
+    "specificity": 0.9903,
+    "f1_score": 0.1043,
+    "roc_auc": 0.7514,
+    "pr_auc": 0.3998,
+    "brier_score": 0.1405,
+    "threshold": 0.5,
+    "confusion_matrix": [
+      [
+        10482,
+        103
+      ],
+      [
+        2525,
+        153
+      ]
+    ],
+    "true_positives": 153,
+    "false_positives": 103,
+    "true_negatives": 10482,
+    "false_negatives": 2525
+  },
+  {
+    "model_name": "XGBoost",
+    "accuracy": 0.6112,
+    "precision": 0.3198,
+    "recall": 0.8215,
+    "specificity": 0.558,
+    "f1_score": 0.4604,
+    "roc_auc": 0.7559,
+    "pr_auc": 0.408,
+    "brier_score": 0.2055,
+    "threshold": 0.5,
+    "confusion_matrix": [
+      [
+        5906,
+        4679
+      ],
+      [
+        478,
+        2200
+      ]
+    ],
+    "true_positives": 2200,
+    "false_positives": 4679,
+    "true_negatives": 5906,
+    "false_negatives": 478
+  }
+]

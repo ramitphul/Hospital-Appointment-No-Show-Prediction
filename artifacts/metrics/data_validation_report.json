@@ -1,0 +1,37 @@
+{
+  "total_records": 110527,
+  "missing_values": {
+    "PatientId": 0,
+    "AppointmentID": 0,
+    "Gender": 0,
+    "ScheduledDay": 0,
+    "AppointmentDay": 0,
+    "Age": 0,
+    "Neighbourhood": 0,
+    "Scholarship": 0,
+    "Hipertension": 0,
+    "Diabetes": 0,
+    "Alcoholism": 0,
+    "Handcap": 0,
+    "SMS_received": 0,
+    "No-show": 0
+  },
+  "duplicate_records": 0,
+  "duplicate_appointments": 0,
+  "invalid_age_count": 1,
+  "invalid_date_count": 5,
+  "gender_distribution": {
+    "F": 71840,
+    "M": 38687
+  },
+  "target_distribution": {
+    "No": 88208,
+    "Yes": 22319
+  },
+  "target_no_show_rate": 0.2019,
+  "validation_status": "PASSED WITH WARNINGS",
+  "anomalies": [
+    "Detected 1 impossible age values (< 0 or > 115).",
+    "Detected 5 records where AppointmentDay precedes ScheduledDay."
+  ]
+}

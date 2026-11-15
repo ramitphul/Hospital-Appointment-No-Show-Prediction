@@ -1,0 +1,11 @@
+{
+  "total_appointments": 110521,
+  "attended_appointments": 88207,
+  "missed_appointments": 22314,
+  "no_show_rate_percent": 20.19,
+  "mean_age": 37.1,
+  "median_waiting_days": 4.0,
+  "same_day_noshow_rate": 4.65,
+  "sms_received_noshow_rate": 27.57,
+  "no_sms_noshow_rate": 16.7
+}

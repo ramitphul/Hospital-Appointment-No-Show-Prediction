@@ -1,0 +1,154 @@
+2026-11-15 22:16:42 | INFO    | data_loader:183 | Loading dataset from: C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\data\raw\KaggleV2-May-2016.csv
+2026-11-15 22:16:42 | INFO    | data_loader:185 | Loaded 110,527 records with columns: ['PatientId', 'AppointmentID', 'Gender', 'ScheduledDay', 'AppointmentDay', 'Age', 'Neighbourhood', 'Scholarship', 'Hipertension', 'Diabetes', 'Alcoholism', 'Handcap', 'SMS_received', 'No-show']
+2026-11-15 22:16:42 | INFO    | data_validator:110 | Validation Complete | Status: PASSED WITH WARNINGS | Total Records: 110,527 | No-Show Rate: 20.19% | Anomalies: 2
+2026-11-15 22:16:43 | INFO    | preprocessor:79 | Cleaned dataset: 110,521 rows retained (6 anomalous/duplicate rows removed).
+2026-11-15 22:17:26 | INFO    | data_loader:183 | Loading dataset from: C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\data\raw\KaggleV2-May-2016.csv
+2026-11-15 22:17:27 | INFO    | data_loader:185 | Loaded 110,527 records with columns: ['PatientId', 'AppointmentID', 'Gender', 'ScheduledDay', 'AppointmentDay', 'Age', 'Neighbourhood', 'Scholarship', 'Hipertension', 'Diabetes', 'Alcoholism', 'Handcap', 'SMS_received', 'No-show']
+2026-11-15 22:17:27 | INFO    | data_validator:110 | Validation Complete | Status: PASSED WITH WARNINGS | Total Records: 110,527 | No-Show Rate: 20.19% | Anomalies: 2
+2026-11-15 22:17:27 | INFO    | data_validator:143 | Saved validation report to C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\metrics\data_validation_report.json and C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\metrics\data_validation_report.md
+2026-11-15 22:17:27 | INFO    | preprocessor:79 | Cleaned dataset: 110,521 rows retained (6 anomalous/duplicate rows removed).
+2026-11-15 22:17:28 | INFO    | preprocessor:187 | Train-Test split completed: Train=88,416 (20.19% no-shows) | Test=22,105 (20.19% no-shows)
+2026-11-15 22:17:28 | INFO    | preprocessor:198 | Preprocessor fitted. Transformed feature dimensions: 106 features.
+2026-11-15 22:17:28 | INFO    | data_loader:198 | Saved 300 sample records to C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\data\sample\sample_appointments.csv
+2026-11-15 22:18:10 | INFO    | data_loader:183 | Loading dataset from: C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\data\raw\KaggleV2-May-2016.csv
+2026-11-15 22:18:11 | INFO    | data_loader:185 | Loaded 110,527 records with columns: ['PatientId', 'AppointmentID', 'Gender', 'ScheduledDay', 'AppointmentDay', 'Age', 'Neighbourhood', 'Scholarship', 'Hipertension', 'Diabetes', 'Alcoholism', 'Handcap', 'SMS_received', 'No-show']
+2026-11-15 22:18:11 | INFO    | eda_generator:44 | Generating EDA charts in: C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\eda
+2026-11-15 22:18:11 | INFO    | preprocessor:79 | Cleaned dataset: 110,521 rows retained (6 anomalous/duplicate rows removed).
+2026-11-15 22:18:14 | INFO    | eda_generator:198 | All 8 EDA visualizations saved successfully.
+2026-11-15 22:18:14 | INFO    | eda_generator:249 | Saved EDA report to C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\eda\eda_summary_report.md
+2026-11-15 22:21:47 | INFO    | train_pipeline_script:55 | Step 1/5: Loading and validating dataset...
+2026-11-15 22:21:47 | INFO    | data_loader:183 | Loading dataset from: C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\data\raw\KaggleV2-May-2016.csv
+2026-11-15 22:21:47 | INFO    | data_loader:185 | Loaded 110,527 records with columns: ['PatientId', 'AppointmentID', 'Gender', 'ScheduledDay', 'AppointmentDay', 'Age', 'Neighbourhood', 'Scholarship', 'Hipertension', 'Diabetes', 'Alcoholism', 'Handcap', 'SMS_received', 'No-show']
+2026-11-15 22:21:47 | INFO    | data_validator:110 | Validation Complete | Status: PASSED WITH WARNINGS | Total Records: 110,527 | No-Show Rate: 20.19% | Anomalies: 2
+2026-11-15 22:21:47 | INFO    | data_validator:143 | Saved validation report to C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\metrics\data_validation_report.json and C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\metrics\data_validation_report.md
+2026-11-15 22:21:47 | INFO    | train_pipeline_script:74 | Step 3/5: Training 6 ML algorithms, hyperparameter tuning, and probability calibration...
+2026-11-15 22:21:48 | INFO    | preprocessor:79 | Cleaned dataset: 110,521 rows retained (6 anomalous/duplicate rows removed).
+2026-11-15 22:21:48 | INFO    | preprocessor:187 | Train-Test split completed: Train=88,416 (20.19% no-shows) | Test=22,105 (20.19% no-shows)
+2026-11-15 22:21:48 | INFO    | preprocessor:198 | Preprocessor fitted. Transformed feature dimensions: 106 features.
+2026-11-15 22:21:49 | INFO    | model_trainer:91 | Training Logistic_Regression on 75,153 samples (106 features)...
+2026-11-15 22:21:50 | INFO    | model_trainer:91 | Training Decision_Tree on 75,153 samples (106 features)...
+2026-11-15 22:21:50 | INFO    | model_trainer:91 | Training Random_Forest on 75,153 samples (106 features)...
+2026-11-15 22:21:52 | INFO    | model_trainer:91 | Training K_Nearest_Neighbors on 75,153 samples (106 features)...
+2026-11-15 22:21:54 | INFO    | model_trainer:91 | Training Gradient_Boosting on 75,153 samples (106 features)...
+2026-11-15 22:22:23 | INFO    | model_trainer:91 | Training XGBoost on 75,153 samples (106 features)...
+2026-11-15 22:22:25 | INFO    | model_evaluator:244 | Model comparison saved to C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\metrics\model_comparison.csv and C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\metrics\model_comparison.json
+2026-11-15 22:22:25 | INFO    | model_trainer:146 | Model comparison complete. Top ranked model by ROC-AUC: XGBoost
+2026-11-15 22:22:25 | INFO    | hyperparameter_tuner:76 | Starting hyperparameter tuning for: xgboost (n_iter=6, cv=3)
+2026-11-15 22:23:11 | INFO    | train_pipeline_script:55 | Step 1/5: Loading and validating dataset...
+2026-11-15 22:23:11 | INFO    | data_loader:183 | Loading dataset from: C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\data\raw\KaggleV2-May-2016.csv
+2026-11-15 22:23:11 | INFO    | data_loader:185 | Loaded 110,527 records with columns: ['PatientId', 'AppointmentID', 'Gender', 'ScheduledDay', 'AppointmentDay', 'Age', 'Neighbourhood', 'Scholarship', 'Hipertension', 'Diabetes', 'Alcoholism', 'Handcap', 'SMS_received', 'No-show']
+2026-11-15 22:23:11 | INFO    | data_validator:110 | Validation Complete | Status: PASSED WITH WARNINGS | Total Records: 110,527 | No-Show Rate: 20.19% | Anomalies: 2
+2026-11-15 22:23:11 | INFO    | data_validator:143 | Saved validation report to C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\metrics\data_validation_report.json and C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\metrics\data_validation_report.md
+2026-11-15 22:23:11 | INFO    | train_pipeline_script:74 | Step 3/5: Training 6 ML algorithms, hyperparameter tuning, and probability calibration...
+2026-11-15 22:23:11 | INFO    | preprocessor:79 | Cleaned dataset: 110,521 rows retained (6 anomalous/duplicate rows removed).
+2026-11-15 22:23:12 | INFO    | preprocessor:187 | Train-Test split completed: Train=88,416 (20.19% no-shows) | Test=22,105 (20.19% no-shows)
+2026-11-15 22:23:12 | INFO    | preprocessor:198 | Preprocessor fitted. Transformed feature dimensions: 106 features.
+2026-11-15 22:23:13 | INFO    | model_trainer:91 | Training Logistic_Regression on 75,153 samples (106 features)...
+2026-11-15 22:23:13 | INFO    | model_trainer:91 | Training Decision_Tree on 75,153 samples (106 features)...
+2026-11-15 22:23:14 | INFO    | model_trainer:91 | Training Random_Forest on 75,153 samples (106 features)...
+2026-11-15 22:23:17 | INFO    | model_trainer:91 | Training K_Nearest_Neighbors on 75,153 samples (106 features)...
+2026-11-15 22:23:19 | INFO    | model_trainer:91 | Training Gradient_Boosting on 75,153 samples (106 features)...
+2026-11-15 22:23:46 | INFO    | model_trainer:91 | Training XGBoost on 75,153 samples (106 features)...
+2026-11-15 22:23:49 | INFO    | model_evaluator:244 | Model comparison saved to C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\metrics\model_comparison.csv and C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\metrics\model_comparison.json
+2026-11-15 22:23:49 | INFO    | model_trainer:146 | Model comparison complete. Top ranked model by ROC-AUC: XGBoost
+2026-11-15 22:23:49 | INFO    | hyperparameter_tuner:76 | Starting hyperparameter tuning for: xgboost (n_iter=4, cv=3)
+2026-11-15 22:24:05 | INFO    | hyperparameter_tuner:111 | Tuning finished for xgboost | Best roc_auc: 0.7477 | Best Params: {'subsample': 0.7, 'scale_pos_weight': 1.0, 'n_estimators': 100, 'max_depth': 5, 'learning_rate': 0.15, 'colsample_bytree': 0.7}
+2026-11-15 22:24:05 | INFO    | model_trainer:240 | Validation AUC: Base=0.7559 vs Tuned=0.7570
+2026-11-15 22:24:05 | INFO    | model_trainer:243 | Retained tuned model as optimal estimator.
+2026-11-15 22:24:05 | INFO    | threshold_optimizer:195 | Probability Calibration (sigmoid): Brier score 0.1394 -> 0.1407
+2026-11-15 22:24:05 | INFO    | threshold_optimizer:162 | Optimal threshold: 0.23 | F1: 0.468 (vs default 0.5: 0.137) | Recall: 73.8% | Precision: 34.2%
+2026-11-15 22:24:06 | INFO    | model_trainer:288 | FINAL HELD-OUT TEST PERFORMANCE | Accuracy: 0.6501 | ROC-AUC: 0.7443 | PR-AUC: 0.4045 | Recall: 0.7195 | Precision: 0.3312 | F1-Score: 0.4536
+2026-11-15 22:24:06 | INFO    | model_trainer:296 | Computing global SHAP explainability on test sample...
+2026-11-15 22:24:06 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:24:06 | INFO    | shap_explainer:89 | Computing global SHAP values for sample of size 300...
+2026-11-15 22:24:07 | INFO    | shap_explainer:133 | Global SHAP summary and bar plots saved.
+2026-11-15 22:24:07 | INFO    | model_trainer:335 | Artifacts successfully saved in C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models
+2026-11-15 22:24:24 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:24:25 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:24:25 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:24:42 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:24:42 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:24:42 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:30:10 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:30:10 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:30:10 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:31:33 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:31:33 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:31:33 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:33:40 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:33:40 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:33:40 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:33:40 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:33:41 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:33:41 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:33:41 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:33:41 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:33:41 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:33:41 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:33:41 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:33:41 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:33:41 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:33:41 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:33:41 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:33:41 | WARNING | data_loader:74 | Generating SYNTHETIC DEMONSTRATION DATASET (clearly distinguished from real data).
+2026-11-15 22:33:43 | INFO    | data_validator:110 | Validation Complete | Status: PASSED WITH WARNINGS | Total Records: 5 | No-Show Rate: 40.00% | Anomalies: 2
+2026-11-15 22:33:43 | INFO    | preprocessor:79 | Cleaned dataset: 3 rows retained (2 anomalous/duplicate rows removed).
+2026-11-15 22:34:11 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:34:11 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:34:11 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:34:12 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:34:12 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:34:12 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:34:12 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:34:12 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:34:12 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:34:12 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:34:12 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:34:12 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:34:12 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:34:12 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:34:12 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:34:12 | WARNING | data_loader:74 | Generating SYNTHETIC DEMONSTRATION DATASET (clearly distinguished from real data).
+2026-11-15 22:34:13 | INFO    | data_validator:110 | Validation Complete | Status: PASSED WITH WARNINGS | Total Records: 5 | No-Show Rate: 40.00% | Anomalies: 2
+2026-11-15 22:34:13 | INFO    | preprocessor:79 | Cleaned dataset: 3 rows retained (2 anomalous/duplicate rows removed).
+2026-11-15 22:34:37 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:34:37 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:34:37 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:34:37 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:34:37 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:34:37 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:34:38 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:34:38 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:34:38 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:34:38 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:34:38 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:34:38 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:34:38 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:34:38 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:34:38 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:34:38 | WARNING | data_loader:74 | Generating SYNTHETIC DEMONSTRATION DATASET (clearly distinguished from real data).
+2026-11-15 22:34:38 | INFO    | data_loader:145 | Synthetic dataset generated with 100 records.
+2026-11-15 22:34:38 | INFO    | data_validator:110 | Validation Complete | Status: PASSED WITH WARNINGS | Total Records: 5 | No-Show Rate: 40.00% | Anomalies: 2
+2026-11-15 22:34:38 | INFO    | preprocessor:79 | Cleaned dataset: 3 rows retained (2 anomalous/duplicate rows removed).
+2026-11-15 22:37:23 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:37:23 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:37:23 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:50:46 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:50:46 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:50:46 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:50:46 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:50:46 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:50:46 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:50:46 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:50:46 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:50:46 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:50:46 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:50:46 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:50:46 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:50:46 | INFO    | predictor:70 | Loading model artifacts from C:\Users\ramit\.gemini\antigravity\scratch\hospital-no-show-prediction\artifacts\models...
+2026-11-15 22:50:46 | INFO    | shap_explainer:56 | Initialized SHAP TreeExplainer.
+2026-11-15 22:50:46 | INFO    | predictor:91 | Artifacts loaded | Version: 1.0.0 | Algorithm: XGBoost | Decision Threshold: 0.230
+2026-11-15 22:50:46 | WARNING | data_loader:74 | Generating SYNTHETIC DEMONSTRATION DATASET (clearly distinguished from real data).
+2026-11-15 22:50:46 | INFO    | data_loader:145 | Synthetic dataset generated with 100 records.
+2026-11-15 22:50:46 | INFO    | data_validator:110 | Validation Complete | Status: PASSED WITH WARNINGS | Total Records: 5 | No-Show Rate: 40.00% | Anomalies: 2
+2026-11-15 22:50:46 | INFO    | preprocessor:79 | Cleaned dataset: 3 rows retained (2 anomalous/duplicate rows removed).

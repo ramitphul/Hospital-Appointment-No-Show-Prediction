@@ -1,0 +1,81 @@
+# Hospital Appointment No-Show Prediction Configuration
+
+project:
+  name: "hospital-no-show-prediction"
+  version: "1.0.0"
+  random_seed: 42
+
+paths:
+  raw_data: "data/raw/KaggleV2-May-2016.csv"
+  processed_train_data: "data/processed/train.parquet"
+  processed_test_data: "data/processed/test.parquet"
+  sample_data: "data/sample/sample_appointments.csv"
+  models_dir: "artifacts/models"
+  metrics_dir: "artifacts/metrics"
+  eda_dir: "artifacts/eda"
+  shap_dir: "artifacts/shap"
+
+data_cleaning:
+  min_age: 0
+  max_age: 115
+  drop_negative_waiting_days: true
+  drop_columns:
+    - "AppointmentID"
+
+features:
+  scenario: "booking"  # "booking" (standard leakage-free) or "pre_appointment" (includes SMS_received)
+  target_col: "No-show"
+  id_cols:
+    - "PatientId"
+    - "AppointmentID"
+  datetime_cols:
+    - "ScheduledDay"
+    - "AppointmentDay"
+  categorical_cols:
+    - "Gender"
+    - "Neighbourhood"
+    - "Age_Group"
+    - "Waiting_Time_Category"
+    - "Appointment_Day_Of_Week"
+  numeric_cols:
+    - "Age"
+    - "Waiting_Days"
+    - "Scheduled_Hour"
+    - "prior_appointments"
+    - "prior_no_shows"
+    - "prior_no_show_rate"
+    - "Num_Conditions"
+  binary_cols:
+    - "Scholarship"
+    - "Hipertension"
+    - "Diabetes"
+    - "Alcoholism"
+    - "Handcap"
+    - "Is_Weekend"
+    - "Is_Same_Day"
+
+split:
+  test_size: 0.20
+  val_size: 0.15
+  stratify: true
+  random_state: 42
+
+risk_thresholds:
+  low_risk_max: 0.30      # p < 0.30 -> Low Risk
+  medium_risk_max: 0.60   # 0.30 <= p < 0.60 -> Medium Risk
+  # p >= 0.60 -> High Risk
+
+training:
+  cv_folds: 5
+  scoring: "roc_auc"
+  default_threshold: 0.50
+  target_recall: 0.60     # operational target recall for no-shows
+
+api:
+  host: "127.0.0.1"
+  port: 8000
+  title: "Hospital Appointment No-Show Prediction API"
+  version: "1.0.0"
+
+frontend:
+  backend_url: "http://127.0.0.1:8000"
